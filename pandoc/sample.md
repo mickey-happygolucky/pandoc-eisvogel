@@ -1,0 +1,50 @@
+---
+title: 使用例
+subtitle: サブタイトル
+date: 2022-04-03
+author: jhon doo
+---
+
+# 概要
+
+概要の本文
+
+## 見出し2
+
+見出し2の本文
+
+
+# PlantUML
+
+```{#fig:uml .plantuml caption="クラス図"}
+サブクラス -|> 親クラス
+```
+
+# コード
+
+ハローを @lst:hello に示す。
+
+
+```{#lst:hello .cpp caption="ハローワールド"}
+#include <iostream>
+
+int main() { //ハロー
+	std::cout << "hello world" << std::endl;
+	return 0;
+}
+```
+
+# 表
+
+@tbl:table のサンプル
+
+
+| No | 項目   |
+|----|--------|
+| 1  | りんご |
+| 2  | みかん |
+: フルーツ {#tbl:table}
+
+# 結論
+
+おしまい
