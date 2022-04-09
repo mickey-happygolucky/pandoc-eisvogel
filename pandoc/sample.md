@@ -2,7 +2,7 @@
 title: 使用例
 subtitle: サブタイトル
 date: 2022-04-03
-author: jhon doo
+author: john doo
 ---
 
 # 概要
