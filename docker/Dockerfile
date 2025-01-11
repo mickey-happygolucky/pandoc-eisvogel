@@ -2,6 +2,7 @@ FROM pandoc/latex
 
 # Eisvogel latex-template
 RUN tlmgr install \
+    soul \
     adjustbox \
     babel-german \
     background \
@@ -39,7 +40,7 @@ RUN tlmgr install \
 
 # Eisvogel
 RUN mkdir -p /opt/pandoc/templates && \
-    wget -O - https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/v2.0.0/Eisvogel-2.0.0.tar.gz | \
+    wget -O - https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/v2.5.0/Eisvogel-2.5.0.tar.gz | \
     tar zxvf - -C /opt/pandoc/templates
 
 RUN apk add --no-cache \
