@@ -12,7 +12,7 @@ docker run --rm \
        "/input/${basename}" \
        --filter pandoc-plantuml \
        --filter pandoc-crossref \
-       --metadata-file="/data/crossref_config.yaml" \
+       --metadata-file="/opt/pandoc/crossref_config.yaml" \
        --standalone \
        --data-dir=/opt/pandoc \
        --template eisvogel \
@@ -25,7 +25,7 @@ docker run --rm \
        --toc \
        -M listings \
        --listings \
-       -H /data/header.tex \
+       -H /opt/pandoc/header.tex \
        -V linkcolor=blue \
        -V table-use-row-colors=true \
        -V titlepage=true \

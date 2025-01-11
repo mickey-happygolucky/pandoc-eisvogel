@@ -61,4 +61,7 @@ RUN pip3 install pandoc-plantuml-filter
 
 ENV PLANTUML_BIN="java -jar /opt/plantuml.jar"
 
+COPY ./files/crossref_config.yaml /opt/pandoc
+COPY ./files/header.tex /opt/pandoc
+
 ENTRYPOINT [ "/usr/local/bin/pandoc" ]
