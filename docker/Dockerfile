@@ -47,8 +47,8 @@ RUN apk add --no-cache \
     openjdk11 \
     python3 \
     py3-pip \
-    ttf-droid \
-    ttf-droid-nonlatin
+    font-droid \
+    font-droid-nonlatin
 
 # RUN apk add --no-cache \
 #     wkhtmltopdf
