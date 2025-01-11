@@ -50,8 +50,8 @@ RUN apk add --no-cache \
     ttf-droid \
     ttf-droid-nonlatin
 
-RUN apk add --no-cache \
-    wkhtmltopdf
+# RUN apk add --no-cache \
+#     wkhtmltopdf
 
 ARG plantuml_version="1.2022.2"
 RUN wget https://github.com/plantuml/plantuml/releases/download/v${plantuml_version}/plantuml-${plantuml_version}.jar -O /opt/plantuml.jar
