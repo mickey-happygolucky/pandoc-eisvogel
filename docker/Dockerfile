@@ -56,8 +56,8 @@ RUN apk add --no-cache \
 ARG plantuml_version="1.2022.2"
 RUN wget https://github.com/plantuml/plantuml/releases/download/v${plantuml_version}/plantuml-${plantuml_version}.jar -O /opt/plantuml.jar
 
-RUN pip3 install --upgrade pip
-RUN pip3 install pandoc-plantuml-filter
+RUN pip3 install --break-system-packages --upgrade pip
+RUN pip3 install --break-system-packages pandoc-plantuml-filter
 
 ENV PLANTUML_BIN="java -jar /opt/plantuml.jar"
 
