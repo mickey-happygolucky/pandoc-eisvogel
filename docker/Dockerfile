@@ -54,7 +54,7 @@ RUN apk add --no-cache \
 # RUN apk add --no-cache \
 #     wkhtmltopdf
 
-ARG plantuml_version="1.2022.2"
+ARG plantuml_version="1.2025.0"
 RUN wget https://github.com/plantuml/plantuml/releases/download/v${plantuml_version}/plantuml-${plantuml_version}.jar -O /opt/plantuml.jar
 
 RUN pip3 install --break-system-packages --upgrade pip
