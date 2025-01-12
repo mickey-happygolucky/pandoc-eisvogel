@@ -1,0 +1,19 @@
+#!/usr/bin/awk -f
+#
+# This script from https://www.johf.com/log/20130113a.html
+# License: unknown
+#
+# 使い方: awk -f jditaa <inputfile> <outputfile> [options]
+#         options は ditaa に渡すオプションをそのまま書く。
+BEGIN {
+    infile  = ARGV[1]
+    outfile = ARGV[2]
+    for (i = 3; i < ARGC; i++)
+        opts = opts " " ARGV[i]
+    while (getline < infile > 0) {
+        gsub(/[ぁ-んーァ-ン亜-龠、。]/, "& ")
+        print > "jditaa.temp"
+    }
+    system("java -jar /opt/ditaa.jar jditaa.temp " outfile opts "> /dev/null")
+    system("rm jditaa.temp")
+}
