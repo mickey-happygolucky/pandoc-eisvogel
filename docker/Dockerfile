@@ -49,7 +49,8 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     font-droid \
-    font-droid-nonlatin
+    font-droid-nonlatin \
+    gawk
 
 # RUN apk add --no-cache \
 #     wkhtmltopdf
@@ -59,10 +60,14 @@ RUN wget https://github.com/plantuml/plantuml/releases/download/v${plantuml_vers
 
 RUN pip3 install --break-system-packages --upgrade pip
 RUN pip3 install --break-system-packages pandoc-plantuml-filter
+RUN pip3 install --break-system-packages pandocfilters
 
 ENV PLANTUML_BIN="java -jar /opt/plantuml.jar"
 
 COPY ./files/crossref_config.yaml /opt/pandoc
 COPY ./files/header.tex /opt/pandoc
+COPY ./files/pandoc-ditaa /usr/local/bin
+COPY ./files/external_oss/ditaa /usr/local/bin
+COPY ./files/external_oss/ditaa.jar /opt
 
 ENTRYPOINT [ "/usr/local/bin/pandoc" ]

@@ -11,6 +11,7 @@ docker run --rm \
        pandoc-eisvogel \
        "/input/${basename}" \
        --filter pandoc-plantuml \
+       --filter pandoc-ditaa \
        --filter pandoc-crossref \
        --metadata-file="/opt/pandoc/crossref_config.yaml" \
        --standalone \
