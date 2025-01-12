@@ -69,5 +69,7 @@ COPY ./files/header.tex /opt/pandoc
 COPY ./files/pandoc-ditaa /usr/local/bin
 COPY ./files/external_oss/ditaa /usr/local/bin
 COPY ./files/external_oss/ditaa.jar /opt
+COPY ./files/external_oss/pandoc-crossref /usr/local/bin
+COPY ./files/external_oss/pandoc /usr/local/bin
 
 ENTRYPOINT [ "/usr/local/bin/pandoc" ]

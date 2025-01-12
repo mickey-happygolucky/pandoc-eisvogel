@@ -16,11 +16,15 @@ author: john doo
 
 # PlantUML
 
+PlantUMLの例を @fig:uml に示します。
+
 ```{#fig:uml .plantuml caption="クラス図"}
 サブクラス -|> 親クラス
 ```
 
 # ditaa
+
+ditaaの例を @fig:ditaa に示します。
 
 ```{#fig:ditaa .ditaa caption="ditaa"}
 
